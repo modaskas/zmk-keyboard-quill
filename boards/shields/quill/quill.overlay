@@ -1,8 +1,11 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
-&nice_nano {
+/ {
     status = "okay";
-    cs-gpios = <&nice_nano P1_00 GPIO_ACTIVE_LOW>;
+
+    /* FIXED: nice_nano is not a valid node label */
+    /* You cannot reference &nice_nano, so we attach to root */
+    cs-gpios = <&gpio0 0 GPIO_ACTIVE_LOW>;
 
     shifter: shifter@0 {
         compatible = "zmk,gpio-595";
@@ -41,7 +44,7 @@ kscan0: kscan_0 {
         <&shifter 17 GPIO_ACTIVE_HIGH>;
 };
 
-kscan1: kscan0 {
+kscan1: kscan_1 {
     compatible = "zmk,kscan-gpio-matrix";
     diode-direction = "col2row";
     wakeup-source;
