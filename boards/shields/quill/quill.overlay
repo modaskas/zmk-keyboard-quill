@@ -1,4 +1,17 @@
-
+&nice_nano_v2 {
+    status = "okay";
+    cs-gpios = <&nice_nanao_v2 9 GPIO_ACTIVE_LOW>;
+    shifter: 595@0 {
+        compatible = "zmk,gpio-595";
+        status = "okay";
+        gpio-controller;
+        spi-max-frequency = <200000>;
+        reg = <0>;   
+        label = "4HC595";
+        #gpio-cells = <2>;
+        ngpios = <8>;
+    };
+};
 
 kscan0: kscan_0 {
     compatible = "zmk,kscan-gpio-matrix";
