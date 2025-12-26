@@ -1,6 +1,5 @@
  board: [ "nice_nano_v2" ]
  shield: [ "quill" ]
-   
       board: nice_nano_v2
       shield: quill
       cmake-args: -DCONFIG_ZMK_STUDIO=y
