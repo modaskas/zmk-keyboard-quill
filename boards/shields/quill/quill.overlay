@@ -1,5 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-&nice_nano { status = "okay"; cs-gpios = <&nice_nano P1_00 GPIO_ACTIVE_LOW>;
+&nice_nano_v2 { status = "okay"; cs-gpios = <&nice_nano_v2 P1_00 GPIO_ACTIVE_LOW>;
 shifter: shifter@0 {
     compatible = "zmk,gpio-595";
     status = "okay";
