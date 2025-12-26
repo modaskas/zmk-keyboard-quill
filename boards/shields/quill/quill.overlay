@@ -1,3 +1,6 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+
 &nice_nano_v2 {
     status = "okay";
     cs-gpios = <&nice_nanao_v2 9 GPIO_ACTIVE_LOW>;
@@ -35,9 +38,9 @@ kscan0: kscan_0 {
         , <&shifter 15 GPIO_ACTIVE_HIGH>
         , <&shifter 16 GPIO_ACTIVE_HIGH>
         , <&shifter 17 GPIO_ACTIVE_HIGH>
-        ;
+    };
+};
 
-/ {
     kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
@@ -50,12 +53,11 @@ kscan0: kscan_0 {
             , <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            ;
+            
+        };
+    
 
-
-#include <dt-bindings/zmk/matrix_transform.h> // Put this with the other includes at the top of your overlay
-
-/ {
+};
     default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
         columns = <3>; // Length of the "col-gpios" array
