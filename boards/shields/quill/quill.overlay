@@ -1,5 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <zmk/physical_layouts.dtsi>
+#include <zmk/physical-layouts.dtsi>
 
 /* =========================
  * SPI + 74HC595 Shift Registers
@@ -16,7 +16,7 @@
         reg = <0>;
         label = "74HC595-chain";
         #gpio-cells = <2>;
-        ngpios = <24>; /* 3 chained 595s */
+        ngpios = <24>; /* 3 chained 74HC595s */
     };
 };
 
