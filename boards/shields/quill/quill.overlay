@@ -50,6 +50,7 @@ kscan0: kscan {
     };
 };
 
+/ {
 default_transform: keymap_transform_0 {
     compatible = "zmk,matrix-transform";
     columns = <18>;
@@ -63,3 +64,4 @@ default_transform: keymap_transform_0 {
         RC(5,0) RC(5,1) RC(5,2) RC(5,3) RC(5,4) RC(5,5) RC(5,6) RC(5,7) RC(5,8) RC(5,9) RC(5,10) RC(5,11)
     >;
   };
+};
