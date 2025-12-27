@@ -1,5 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <zmk/physical_layouts.h>
+#include <zmk/physical_layouts.dtsi>
 
 /* =========================
  * SPI + 74HC595 Shift Registers
@@ -90,7 +90,6 @@
             display-name = "Quill Default";
 
             keys = <
-                /* Row 0 */
                 PHYSICAL_KEY(0,0,  0,0) PHYSICAL_KEY(0,1,  1,0) PHYSICAL_KEY(0,2,  2,0) PHYSICAL_KEY(0,3,  3,0)
                 PHYSICAL_KEY(0,4,  4,0) PHYSICAL_KEY(0,5,  5,0) PHYSICAL_KEY(0,6,  6,0) PHYSICAL_KEY(0,7,  7,0)
                 PHYSICAL_KEY(0,8,  8,0) PHYSICAL_KEY(0,9,  9,0) PHYSICAL_KEY(0,10,10,0) PHYSICAL_KEY(0,11,11,0)
