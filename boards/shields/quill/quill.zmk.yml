@@ -1,0 +1,7 @@
+file_format: "1"
+id: quill
+name: quill
+type: shield
+url: https://github.com/modaskas/zmk-keyboard-quill.git
+features:
+  - keys
